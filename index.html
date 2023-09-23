@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Le portfolio de Sylla Siaka, présentant ses projets et compétences en développement web." />
+    <meta name="keywords" content="Portfolio, Sylla Siaka, développement web, projets, compétences" />
+    <link rel="icon" type="image/svg" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sylla Siaka | Portfolio</title>
+  </head>
+
+  <style>
+    .loaderr-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--body-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .title--name{
+      color: var(--first-color);
+      font-size: var(--big-font-size);
+      text-align: center;
+      margin-bottom: 50px;
+      margin-inline: 20px;
+    }
+
+    .loaderd {
+      border: 6px solid var(--first-color);
+      border-top: 6px solid #e7e7e7;
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <body>
+
+    <div class="loaderr-container" id="loader">
+      <div class="title--name">Sylla Siaka | FullStack Developer</div>
+      <div class="loaderd"></div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <script>
+      window.addEventListener('load', () => {
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
